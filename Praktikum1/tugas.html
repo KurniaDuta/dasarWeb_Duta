@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Mahasiswa</title>
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="tanggal-lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir" placeholder="dd/mm/yyyy"><br><br>
+
+            <label for="jenis-kelamin">Jenis Kelamin:</label><br>
+            <select id="jenis-kelamin" name="jenis-kelamin">
+                <option value="laki-laki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
+            </select><br><br>
+
+            <label for="alamat">Alamat:</label><br>
+            <textarea id="alamat" name="alamat" rows="7" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Komentar</legend>
+            <label for="sumber">Darimana Anda mengetahui buku ini?</label><br>
+            <select id="sumber" name="sumber">
+                <option value="google">Google</option>
+                <option value="teman">Teman</option>
+                <option value="iklan">Iklan</option>
+            </select><br><br>
+
+            <label for="pendapat">Bagaimana Menurut Anda terhadap buku ini?</label><br>
+            <input type="radio" id="biasa" name="pendapat" value="biasa">
+            <label for="biasa">Biasa</label>
+            <input type="radio" id="bagus" name="pendapat" value="bagus">
+            <label for="bagus">Bagus</label>
+            <input type="radio" id="menarik" name="pendapat" value="menarik">
+            <label for="menarik">Menarik</label><br><br>
+
+            <label for="komentar">Komentar Anda:</label><br>
+            <textarea id="komentar" name="komentar" rows="4" cols="50"></textarea><br><br>
+
+            <input type="checkbox" id="info" name="info">
+            <label for="info">Kirim ke Email bila ada info terbaru</label><br><br>
+        </fieldset>
+
+        <br>
+        <div class="center">
+            <input type="submit" value="Kirim">
+        </div>
+    </form>
+</body>
+</html>
