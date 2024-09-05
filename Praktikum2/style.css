@@ -21,6 +21,7 @@ h2{
 }
 
 body{
-    background: url(bunga.jpg);
+    background: url(tree.png), url(field.jpg);
+    background-repeat: no-repeat, repeat;
     color: white;
 }
