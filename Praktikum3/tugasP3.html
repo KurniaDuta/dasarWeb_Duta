@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas P3</title>
+</head>
+
+<body>
+    <form>
+        <label for="nama_depan">Nama Depan: <input type="text" id="nama_depan"></label><br><br>
+        <label for="nama_belakang">Nama Belakang: <input type="text" id="nama_belakang"></label><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function () {
+            var depan = document.getElementById("nama_depan").value;
+            var belakang = document.getElementById("nama_belakang").value;
+            
+            if(depan == "" || belakang == ""){
+                alert("Tidak boleh ada yang kosong")
+            } else{
+                alert("Halo " + depan + " " + belakang)
+            }
+        })
+    </script>
+</body>
+
+</html>
