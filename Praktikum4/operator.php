@@ -29,4 +29,14 @@ echo "Hasil Lebih Kecil = $lebihKecil <br>";
 echo "Hasil Lebih Besar = $lebihBesar <br>";
 echo "Hasil Lebih Kecil Sama = $lebihKecilSama <br>";
 echo "Hasil Lebih Besar Sama = $lebihBesarSama <br>";
+
+$and = $a && $b;
+$or = $a || $b;
+$notA = !$a;
+$notB = !$b;
+
+echo "Hasil AND = $and <br>";
+echo "Hasil OR = $or <br>";
+echo "Hasil NOT A = $notA <br>";
+echo "Hasil NOT B = $notB <br>";
 ?>
