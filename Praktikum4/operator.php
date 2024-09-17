@@ -39,4 +39,15 @@ echo "Hasil AND = $and <br>";
 echo "Hasil OR = $or <br>";
 echo "Hasil NOT A = $notA <br>";
 echo "Hasil NOT B = $notB <br>";
+
+$a += $b;
+echo "Hasil A += B = $a <br>";
+$a -= $b;
+echo "Hasil A -= B = $a <br>";
+$a *= $b;
+echo "Hasil A *= B = $a <br>";
+$a /= $b;
+echo "Hasil A /= B = $a <br>";
+$a %= $b;
+echo "Hasil A %= B = $a <br>";
 ?>
