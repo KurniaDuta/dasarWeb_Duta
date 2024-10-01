@@ -9,11 +9,9 @@
     <?php
         $listDosen=["Elok Nur Hamdana", "Unggul Pamenang", "Bagus Nugraha"];
 
-        echo $listDosen[2];
-        echo "<br>";
-        echo $listDosen[0];
-        echo "<br>";
-        echo $listDosen[1];
+        for ($i=0; $i < count($listDosen); $i++) { 
+            echo $listDosen[$i]."<br>";
+        }
     ?>
 </body>
 </html>
