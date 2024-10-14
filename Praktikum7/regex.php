@@ -37,4 +37,13 @@
     } else {
         echo "Tidak cocok";
     }
+
+    echo "<br>";
+    $pattern6 = '/go{n,m}d/';
+    $text6 = 'god is good.';
+    if (preg_match($pattern6, $text6, $matches)) {
+        echo "Cocokkan: " . $matches[0];
+    } else {
+        echo "Tidak cocok";
+    }
 ?>
