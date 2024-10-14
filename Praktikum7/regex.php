@@ -28,6 +28,13 @@
     } else {
         echo "Tidak cocok";
     }
-    echo "<br>";
     
+    echo "<br>";
+    $pattern5 = '/go?d/';
+    $text5 = 'god is good.';
+    if (preg_match($pattern5, $text5, $matches)) {
+        echo "Cocokkan: " . $matches[0];
+    } else {
+        echo "Tidak cocok";
+    }
 ?>
