@@ -1,0 +1,351 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+:-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+body {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header.navbar-container {
+    width: 100%;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+header.navbar-container.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header.navbar-container .logo img {
+    width: 200px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #AC2822;
+    color: white;
+}
+
+#carousel {
+    padding: 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#prevBtn, #nextBtn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+#carousel:hover #prevBtn,
+#carousel:hover #nextBtn {
+    opacity: 1;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #AC2822;
+    color: white;
+}
+
+section {
+    padding: 2rem 4rem;
+    text-align: center;
+    margin-inline: auto;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+    flex: 1;
+}
+
+.about-description .title {
+    font-size: 2.5rem;
+    color: #000;
+    margin-block: 1rem;
+}
+
+.about-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.about-image img {
+    flex: 1;
+    display: flex;
+    width: 250px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#models .title {
+    font-size: 2.5rem;
+    color: #333; 
+    text-align: center;
+    margin: 2rem;
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+.car {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.car:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #AC2822;
+}
+
+.car img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.car:hover img {
+    transform: scale(1.05);
+}
+
+.car h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.car:hover h3 {
+    color: #AC2822;
+}
+
+.car p {
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.car-models {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+#contact-section {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.form-content {
+    flex: 1;
+    margin-right: 2rem;
+    padding: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #fff;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #AC2822;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #800000;
+}
+
+.image-content {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+    right: -5%; 
+}
+
+.image-content img {
+    max-width: 110%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hasil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+hr {
+    border: rgb(231, 231, 231) 1px solid;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
